@@ -23,10 +23,15 @@ $ [sudo] pip install github-colors
 }
 ```
 
-`get(name)`
+`get(name,default)` (default color is `#ccc`)
 ```python
 >>> github_colors.get('1c enterprise')
 '#814CCC'
+
+>>> github_colors.get('awk','#ccc')
+'#ccc'
+>>> github_colors.get('not-existing','#ccc')
+'#ccc'
 ```
 
 <p align="center">

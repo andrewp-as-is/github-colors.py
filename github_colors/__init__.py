@@ -389,9 +389,11 @@ def exists(name):
             return True
     return False
 
-def get(name):
+def get(name,default=None):
     """return a string with language color"""
+    if not default:
+        default = '#ccc'
     for k,v in COLORS.items():
         if k.lower()==name.lower():
             return v
-    return None
+    return default
